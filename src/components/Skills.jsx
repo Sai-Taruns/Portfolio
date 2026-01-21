@@ -1,49 +1,85 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaJs, FaReact, FaNodeJs, FaPython, FaDatabase,FaJava } from "react-icons/fa";
+import {
+  FaJs,
+  FaReact,
+  FaNodeJs,
+  FaPython,
+  FaDatabase,
+  FaJava,
+} from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
-import { RiNextjsFill,RiTailwindCssFill } from "react-icons/ri";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import { CgFigma } from "react-icons/cg";
 
 export default function Skills() {
   const [skills] = useState([
-    { id: 1, name: "JavaScript", icon: <FaJs size={50} /> },
-    { id: 2, name: "React", icon: <FaReact size={50} /> },
-    { id: 3, name: "Node.js", icon: <FaNodeJs size={50} /> },
-    { id: 4, name: "Python", icon: <FaPython size={50} /> },
-    { id: 5, name: "MongoDB", icon: <FaDatabase size={50} /> },
-    { id: 6, name: "Java", icon: <FaJava size={50} /> },
-    { id: 7, name: "Postgresql", icon: <BiLogoPostgresql size={50} /> },
-    { id: 8, name: "Next.js", icon: <RiNextjsFill size={50} /> },
-    { id: 9, name: "Tailwind", icon: <RiTailwindCssFill size={50} /> },
-    { id: 10, name: "Figma", icon: <CgFigma size={50} /> },
+    { id: 1, name: "Python", icon: <FaPython size={50} /> },
+    { id: 2, name: "SQL", icon: <FaDatabase size={50} /> },
+    { id: 3, name: "PySpark", icon: <img src="/assets/PySpark-logo-1.jpeg" alt="R" width="50" height="50" /> },
+    { id: 4, name: "R", icon:  <img src="/assets/r.png" alt="R" width="50" height="50" /> },
+    { id: 5, name: "Java", icon: <FaJava size={50} /> },
+
+    { id: 6, name: "AWS", icon:  <img src="/assets/AWS.png" alt="AWS" width="50" height="50" /> },
+    { id: 7, name: "Azure ML", icon: <img src="/assets/azure.png" alt="Azure" width="50" height="50" />},
+    { id: 8, name: "GCP", icon: <img src="/assets/googlecloud.png" alt="GCP" width="50" height="50" />},
+
+    { id: 9, name: "Databricks", icon: <img src="/assets/databricks.svg" alt="Databricks" width="50" height="50" />},
+    { id: 10, name: "Kafka", icon: <img src="/assets/kafka-logo.png" alt="kafka" width="50" height="50" />},
+    { id: 11, name: "Airflow", icon: <img src="/assets/airflow.png" alt="Airflow" width="50" height="50" />},
+    { id: 12, name: "Snowflake", icon: <img src="/assets/Snowflake.png" alt="R" width="50" height="50" />},
+    { id: 13, name: "Redshift", icon: <img src="/assets/redshift.png" alt="Redshift" width="50" height="50" />},
+    { id: 14, name: "BigQuery", icon: <img src="/assets/bigquery.svg" alt="Bigquery" width="50" height="50" />},
+    { id: 15, name: "PostgreSQL", icon: <BiLogoPostgresql size={50} /> },
+
+    { id: 16, name: "MLflow (MLOps)", icon: <img src="/assets/mlflow.png" alt="ML Flow" width="50" height="50" />},
+    { id: 17, name: "Docker", icon: <img src="/assets/docker.png" alt="Docker" width="50" height="50" />},
+    { id: 18, name: "Kubernetes", icon: <img src="/assets/kubernetes.png" alt="Kubernetes" width="50" height="50" />},
+
+    { id: 19, name: "NLP & Generative AI (RAG)", icon: <img src="/assets/NLP.jpg" alt="NLP" width="50" height="50" />},
+    { id: 20, name: "TensorFlow", icon: <img src="/assets/Tensorflow-Logo--Streamline-Ultimate.png" alt="TensorFlow" width="50" height="50" />},
+    { id: 21, name: "PyTorch", icon: <img src="/assets/pytorch_logo_icon_144957.png" alt="Pytorch" width="50" height="50" />},
+    { id: 22, name: "Scikit-learn", icon: <img src="/assets/scikit.jpg" alt="Scikit-Learnn" width="50" height="50" />},
+
+    { id: 23,name: "Power BI", icon: <img src="/assets/market-demand.png" alt="Power BI" width="50" height="50" />},
+    { id: 24, name: "Tableau", icon:  <img src="/assets/market-demand.png" alt="Tableau" width="50" height="50" /> },
+    { id: 25, name: "A/B Testing", icon: <img src="/assets/ab.jpg" alt="A/B" width="50" height="50" />},
+    { id: 26, name: "Linux", icon: <img src="/assets/linux.png" alt="Linux" width="50" height="50" />},
   ]);
 
   const [experiences] = useState([
     {
       id: 1,
-      company: "Google",
-      role: "Lead Software Engineer",
-      period: "Nov 2019 - Present",
+      company: "McKinsey & Company, Dallas, TX",
+      role: "Data Engineer (AI/ML)",
+      period: "Feb 2024 – Present",
       description:
-        "Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience. Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience. Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience. Developed innovative solutions for Google's core search algorithms, optimizing search accuracy and user experience.",
-      logo: "/assets/google.svg",
+        "Implemented Retrieval-Augmented Generation (RAG) models with probabilistic/statistical validation, reducing false positives in safety alerts by 35%. Built cloud spend & utilization analytics pipelines processing telemetry and billing datasets for cost attribution and capacity planning. Orchestrated end-to-end pipelines in Apache Airflow (DAG scheduling, retries, SLA monitoring). Designed scalable ingestion using Azure Data Factory + Synapse into ADLS Gen2, and automated ETL workflows in AWS Glue; used Boto3 with S3/Lambda to automate cloud resource management. Productionized ML models using TensorFlow, PyTorch, Scikit-learn, and XGBoost; delivered automation with NLP + Generative AI for summarization and synthetic data generation.",
+      logo: "/assets/MCk.jpg",
     },
     {
       id: 2,
-      company: "Youtube",
-      role: "Software Engineer",
-      period: "Jan 2017 - Oct 2019",
+      company: "Morgan Stanley, Chicago, IL",
+      role: "Data Engineer",
+      period: "Jan 2023 - Feb 2024",
       description:
-        "At Youtube, I served as a  Software Engineer, focusing on the design and implementation of backend systems for the social media giant's dynamic platform. Working on projects that involved large-scale data processing and user engagement features, I leveraged my expertise to ensure seamless functionality and scalability.",
-      logo: "/assets/youtube.svg",
+        "Analyzed large-scale infrastructure and data-processing workloads, reducing compute and query execution costs by 30%. Built SQL/Python pipelines to monitor utilization trends, detect anomalies, and improve allocation; performed root-cause analysis on abnormal trading behaviors, improving risk-scoring accuracy by 22%. Engineered Spark/Databricks transformation workflows for multi-billion-row datasets and implemented dbt-style modular SQL transformation layers. Delivered BI layers (Redshift + S3) and dashboards in Tableau/Power BI; optimized SQL, Spark configs, and clusters for higher throughput and lower cost. Built end-to-end MLOps pipelines with MLflow for tracking, versioning, and automated deployments; contributed to GCP workflows (BigQuery, Cloud Functions) and Looker dashboards.",
+      logo: "/assets/morgan-stanley.jpg",
+    },
+    {
+      id: 3,
+      company: "Mphasis, India",
+      role: "Data Analyst",
+      period: "Aug 2020 - Aug 2022",
+      description:
+        "Designed and optimized ETL pipelines using AWS Glue and Lambda to process 10M+ financial transactions daily with high reliability. Built anomaly detection models and statistical validation workflows, improving fraud detection accuracy by 18%. Partnered with data science teams to automate model deployment, monitoring, and data validation for risk and compliance analytics. Created automated dashboards in Power BI and Tableau for KPIs and data quality trends; conducted A/B testing on digital engagement strategies using 50,000+ user interactions.",
+      logo: "/assets/MPHASIS.webp",
     },
   ]);
 
   return (
     <div className="mt-3 lg:mt-16" id="skills">
       <div className="px-5 lg:px-28">
-
         <motion.h2
           className="text-2xl lg:text-4xl text-center"
           initial={{ opacity: 0, y: -20 }}
@@ -70,7 +106,6 @@ export default function Skills() {
             </motion.div>
           ))}
         </div>
-
       </div>
 
       {/* Experience Section */}
@@ -118,7 +153,6 @@ export default function Skills() {
             </motion.div>
           ))}
         </div>
-
       </div>
     </div>
   );
